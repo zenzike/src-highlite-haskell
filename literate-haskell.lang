@@ -1,0 +1,13 @@
+# literate-haskell.lang Copyright (c) 2010 Nicolas Wu
+
+state code start '^>' begin
+  include "haskell.lang"
+end
+
+state code delim "\\begin{code}" "\\end{code}" multiline begin
+  include "haskell.lang"
+end
+
+state code delim "\\begin{spec}" "\\end{spec}" multiline begin
+  include "haskell.lang"
+end
